@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music_flowersuspense.ogg-7451c582194fba56684238bbec92f7ef.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/music_flowersuspense.ogg"
+dest_files=[ "res://.import/music_flowersuspense.ogg-7451c582194fba56684238bbec92f7ef.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

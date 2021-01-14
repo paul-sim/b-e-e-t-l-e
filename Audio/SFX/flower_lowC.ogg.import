@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flower_lowC.ogg-539d825deb87f352f66a1744f7e985c9.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/flower_lowC.ogg"
+dest_files=[ "res://.import/flower_lowC.ogg-539d825deb87f352f66a1744f7e985c9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

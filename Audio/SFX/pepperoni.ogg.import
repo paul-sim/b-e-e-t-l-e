@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pepperoni.ogg-3e5a79bf3dce418857acbe7fa1231b56.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/pepperoni.ogg"
+dest_files=[ "res://.import/pepperoni.ogg-3e5a79bf3dce418857acbe7fa1231b56.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

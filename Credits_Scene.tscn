@@ -1,0 +1,175 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Environment/sky-export.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Environment/white_square.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Characters/cutscene-Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/orange_kid_credits.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Audio/Music/music_credits.ogg" type="AudioStream" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Init"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Init"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Characters_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="FadeScreen" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 144.261, 71.1855 )
+scale = Vector2( 35.7266, 35.7266 )
+z_index = 10
+texture = ExtResource( 3 )
+
+[node name="Fade_AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Init"
+anims/Init = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -114.78
+margin_top = -182.418
+margin_right = 385.22
+margin_bottom = 317.582
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Characters_Sprite" type="Sprite" parent="."]
+position = Vector2( 158.254, 123.585 )
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="Characters_AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Init"
+anims/Init = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 96.8138
+margin_top = 10.3652
+margin_right = 138.814
+margin_bottom = 34.3652
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Art"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 96.6236
+margin_top = 26.9843
+margin_right = 137.624
+margin_bottom = 46.9843
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Viv"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 81.3251
+margin_top = 43.4404
+margin_right = 260.325
+margin_bottom = 67.4404
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "@emojakeyg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 80.7689
+margin_top = 59.9803
+margin_right = 259.769
+margin_bottom = 83.9803
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(instagram)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 176.301
+margin_top = 10.4298
+margin_right = 301.301
+margin_bottom = 34.4298
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Code / Audio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 191.086
+margin_top = 26.9365
+margin_right = 358.086
+margin_bottom = 50.9365
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Paul"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 180.721
+margin_top = 43.009
+margin_right = 347.721
+margin_bottom = 67.009
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "@PaulSim_"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 182.221
+margin_top = 59.6342
+margin_right = 349.221
+margin_bottom = 83.6342
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(twitter)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true

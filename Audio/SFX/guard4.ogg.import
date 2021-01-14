@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/guard4.ogg-c3edb360a9d38459e6ff76e011422470.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/guard4.ogg"
+dest_files=[ "res://.import/guard4.ogg-c3edb360a9d38459e6ff76e011422470.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

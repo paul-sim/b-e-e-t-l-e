@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sauce.ogg-27651146cc623780cc746f93d0a0f6bc.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/sauce.ogg"
+dest_files=[ "res://.import/sauce.ogg-27651146cc623780cc746f93d0a0f6bc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

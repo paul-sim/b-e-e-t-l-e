@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flower_b.ogg-14bce54cae9643e75c45665e71fd1c1b.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/flower_b.ogg"
+dest_files=[ "res://.import/flower_b.ogg-14bce54cae9643e75c45665e71fd1c1b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

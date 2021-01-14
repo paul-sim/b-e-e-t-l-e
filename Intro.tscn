@@ -1,0 +1,460 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Sprites/Environment/sky-export.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Environment/white_square.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Environment/black_square.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Intro.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Icons/keyboard-Sheet.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/orange_kid_credits.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scripts/TypeItem.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/AudioController.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Init"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("WhiteBackground_Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SkyBackground_Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Typing_Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Animate"
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+length = 0.001
+
+[sub_resource type="Animation" id=4]
+resource_name = "Init"
+length = 0.001
+
+[sub_resource type="Animation" id=5]
+resource_name = "FadeOutText"
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Init"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Label2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Typing_Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+
+[sub_resource type="Animation" id=10]
+resource_name = "FadeInText"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Label3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Label4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RichTextLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "FadeOutText"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Label3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Label4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Typing_Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "Init"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Label3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Label4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Typing_Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Intro" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Init"
+anims/Init = SubResource( 1 )
+
+[node name="SkyBackground_Sprite" type="Sprite" parent="."]
+position = Vector2( 156.801, 14.3028 )
+texture = ExtResource( 1 )
+
+[node name="BlackBackground_Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 188.553, 94.5344 )
+scale = Vector2( 32.5289, 24.0541 )
+z_index = 10
+texture = ExtResource( 3 )
+
+[node name="WhiteBackground_Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 254.269, 125.125 )
+scale = Vector2( 38.9258, 22.3103 )
+texture = ExtResource( 2 )
+
+[node name="Typing_Sprite" type="Sprite" parent="."]
+position = Vector2( 158.646, 96.4147 )
+texture = ExtResource( 5 )
+hframes = 6
+
+[node name="Label" type="Label" parent="."]
+margin_left = 131.063
+margin_top = 65.1024
+margin_right = 171.063
+margin_bottom = 80.1024
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Type  \""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 181.68
+margin_top = 64.953
+margin_right = 221.68
+margin_bottom = 79.953
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 131.937
+margin_top = 65.3673
+margin_right = 171.937
+margin_bottom = 80.3673
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 180.403
+margin_top = 64.7489
+margin_right = 220.403
+margin_bottom = 79.7489
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TypeItemsContainer" type="Node2D" parent="."]
+
+[node name="Start_TypeItem" type="Sprite" parent="TypeItemsContainer"]
+script = ExtResource( 7 )
+sfx = "intro_type_confirm.ogg"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TypeItemsContainer/Start_TypeItem"]
+margin_left = 149.683
+margin_top = 65.293
+margin_right = 189.683
+margin_bottom = 105.293
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Start[/center]"
+text = "Start"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TypeItemsContainer/Start_TypeItem"]
+autoplay = "Init"
+anims/Animate = SubResource( 2 )
+anims/Idle = SubResource( 3 )
+anims/Init = SubResource( 4 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="TypeItemsContainer/Start_TypeItem"]
+autoplay = "Init"
+anims/FadeOutText = SubResource( 5 )
+anims/Init = SubResource( 6 )
+
+[node name="World_TypeItem" type="Sprite" parent="TypeItemsContainer"]
+script = ExtResource( 7 )
+sfx = "intro_type_confirm.ogg"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TypeItemsContainer/World_TypeItem"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 128.301
+margin_top = 65.2649
+margin_right = 187.301
+margin_bottom = 105.265
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Hello_World[/center]"
+text = "Hello_World"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TypeItemsContainer/World_TypeItem"]
+autoplay = "Init"
+anims/Animate = SubResource( 7 )
+anims/Idle = SubResource( 8 )
+anims/Init = SubResource( 9 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="TypeItemsContainer/World_TypeItem"]
+autoplay = "Init"
+anims/FadeInText = SubResource( 10 )
+anims/FadeOutText = SubResource( 11 )
+anims/Init = SubResource( 12 )
+
+[node name="AudioController" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="SFX" type="Node2D" parent="AudioController"]
+
+[node name="SFX_AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioController/SFX"]
+
+[node name="SFX_AudioStreamPlayer2" type="AudioStreamPlayer" parent="AudioController/SFX"]
+[connection signal="animation_finished" from="TypeItemsContainer/Start_TypeItem/AnimationPlayer2" to="TypeItemsContainer/Start_TypeItem" method="_on_AnimationPlayer2_animation_finished"]
+[connection signal="animation_finished" from="TypeItemsContainer/World_TypeItem/AnimationPlayer2" to="TypeItemsContainer/World_TypeItem" method="_on_AnimationPlayer2_animation_finished"]
