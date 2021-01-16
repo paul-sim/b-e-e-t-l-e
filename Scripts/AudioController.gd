@@ -19,7 +19,6 @@ var music_switch = true
 var sfx_switch = true
 
 func play_music(music) :
-	
 	if music_switch:
 		if fade_in_music(music):
 			stop_music2()
@@ -28,6 +27,7 @@ func play_music(music) :
 		if fade_in_music2(music):
 			stop_music()
 			music_switch = true
+	pass
 
 func fade_in_music(music) -> bool:
 	if _music_audioStreamPlayer2.stream != null:
